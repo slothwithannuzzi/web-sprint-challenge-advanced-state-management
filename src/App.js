@@ -8,16 +8,19 @@ import { fetchSmurf } from "./actions";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import thunk from "redux-thunk";
+import { FETCH_SUCCESS, FETCH_FAIL, START_FETCH, ADD_SMURF } from "./actions"
 
 class App extends Component {
   constructor(){
-    super()
-    fetchSmurf()
+    super();
+    fetchSmurf();
   }
   render() {
 
     return (
       <div className="App">
+
         <Header />
 
         <main>
