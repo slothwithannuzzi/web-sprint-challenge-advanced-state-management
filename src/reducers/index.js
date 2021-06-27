@@ -1,8 +1,15 @@
 
 export const initialState = {
+    smurfs:[],
+    loading: false,
+    error: 'Failed to load smurfs.'
 }
 
-const reducer = ()=>{
+const reducer = (state = initialState, action)=>{
+    switch(action.type) {
+        default: 
+            return state;
+    }
 }
 
 export default reducer;
