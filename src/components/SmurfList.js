@@ -20,7 +20,7 @@ import reducer from '../reducers';
     return(
     <div className="listContainer">
         {props.smurfs.map((smurf) => (
-            <Smurf smurf={smurf}/>
+            <Smurf key = {smurf.id} smurf={smurf}/>
         ))}
     </div>
     )
@@ -34,7 +34,7 @@ const mapStatetoProps = (state) => {
     }
   }
 
-export default connect(mapStatetoProps)(SmurfList);
+export default connect(mapStatetoProps, { fetchSmurf })(SmurfList);
 
 //Task List:
 //1. Connect the smurfs and loading state values to the SmurfList component.

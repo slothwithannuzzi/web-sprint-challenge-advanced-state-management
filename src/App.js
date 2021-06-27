@@ -13,15 +13,17 @@ import thunk from "redux-thunk";
 import { FETCH_SUCCESS, FETCH_FAIL, START_FETCH, ADD_SMURF } from "./actions"
 
 class App extends Component {
-  constructor(){
-    super()
-    fetchSmurf()
+  
+  constructor(props){
+    super(props)
+    props.fetchSmurf();
   }
+
+
   render() {
 
     return (
       <div className="App">
-
         <Header />
 
         <main>
@@ -41,7 +43,7 @@ const mapStatetoProps = (state) => {
   }
 }
 
-export default connect(mapStatetoProps, {fetchSmurf})(App);
+export default connect(mapStatetoProps, { fetchSmurf })(App);
 
 //Task List:
 //1. Connect the fetchSmurfs actions to the App component.
